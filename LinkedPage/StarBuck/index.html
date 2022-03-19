@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarBuck</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+     <section>
+       <div class="circle"></div>
+           <header>
+                <a href="#" ><img src="./images/logo.png" class="logo"></a>
+                <div class="toggle" onclick="toggleMenu();"></div>
+                <ul class="tabmenu">
+                    <li><a href="https://www.starbucks.vn/" target="_self">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </header>
+            <div class="content">
+                <div class="textBox">
+                    <h2>It's not just coffee. <br> It's <span>StarBuck</span></h2>
+                    <p>
+                        ĐÂY LÀ ÁDJABHSJKDGHASKJDHALSHDASDASJDKLHASJKDHKJSHDJASHDKJASHDKJAHSDKJHAK
+                        ÁDJHGASDHASHAJSGHJASJASGDJASGHDJAGHDJGSJDGHSD
+                        ÁDJAGSDAJSDGHASJDGHASJGDAJSDGHAJSHAJH
+                        ẠDGHSDHGASDHASKDJHASJKLDH
+                    </p>
+                    <a href="https://www.starbucks.vn/" target="blank">Learn More</a>
+                </div>
+                    <div class="imgBox">
+                        <img src="../StarBuck/images/img1.png" class="startbucks">
+                    </div>
+            </div>
+            <ul class="thumb">
+                <li><img src="../StarBuck/images/thumb1.png" onclick="imgSlider('../StarBuck/images/img1.png');changeCircleColor('#017143')"></li>
+                <li><img src="../StarBuck/images/thumb2.png" onclick="imgSlider('../StarBuck/images/img2.png');changeCircleColor('#eb7495')"></li>
+                <li><img src="../StarBuck/images/thumb3.png" onclick="imgSlider('../StarBuck/images/img3.png');changeCircleColor('#d752b1')"></li>
+            </ul>
+            <ul class="sci">
+                <li><a href="https://www.facebook.com/valneagain/" target="blank"><img src="../StarBuck/images/facebook.png"></a></li>
+                <li><a href="#"><img src="../StarBuck/images/twitter.png"></a></li>
+                <li><a href="#"><img src="../StarBuck/images/instagram.png"></a></li>
+            </ul>
+    </section>
+
+        <script type="text/javascript">
+            function imgSlider(anything){
+                document.querySelector('.startbucks').src = anything;
+            }
+            function changeCircleColor(color){
+                const circle = document.querySelector('.circle');
+                circle.style.background = color;
+            }
+            function toggleMenu(){
+                var menuToggle = document.querySelector('.toggle');
+                var tabmenu = document.querySelector('.tabmenu');
+                menuToggle.classList.toggle('active');
+                tabmenu.classList.toggle('active')
+            }
+        </script>
+
+    </body>
+</html>

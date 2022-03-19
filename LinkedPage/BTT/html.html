@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <section>
+            <div class="circle"></div>
+            <header>
+                <a href="#"><img src="./images/1.png" class="logo" /></a>
+                <div class="toggle" onclick="toggleMenu();"></div>
+                <ul class="tabmenu">
+                    <li>
+                        <a href="https://www.starbucks.vn/" target="_self"
+                            >Home</a
+                        >
+                    </li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </header>
+            <div class="content">
+                <div class="textBox">
+                    <h2>
+                        Không chỉ là bánh tráng <br />
+                        Mà nó là<br />
+                        <span>Bánh Tráng Vip Pro</span>
+                    </h2>
+                    <p>
+                        Ăn cái thứ này vào thì chỉ có thèm từ chết tới bị
+                        thương, tại vì nó quá ngon !!!<br />
+                        Không tin à ????<br />
+                        Làm thử 1 ngao đi rồi biết
+                    </p>
+                    <a href="https://www.starbucks.vn/" target="blank"
+                        >Chơi luôn</a
+                    >
+                </div>
+                <div class="imgBox">
+                    <img
+                        src="https://product.hstatic.net/1000331888/product/banh_trang_floating_836f4b51103e42288678c79089d0b062.png"
+                        class="startbucks"
+                    />
+                </div>
+            </div>
+            <ul class="thumb">
+                <li>
+                    <img
+                        src="https://product.hstatic.net/1000331888/product/banh_trang_floating_836f4b51103e42288678c79089d0b062.png"
+                        onclick="imgSlider('https://product.hstatic.net/1000331888/product/banh_trang_floating_836f4b51103e42288678c79089d0b062.png');changeCircleColor('#fc9905')"
+                    />
+                </li>
+                <li>
+                    <img
+                        src="../Bánh tráng trộn/images/2.png"
+                        onclick="imgSlider('../Bánh tráng trộn/images/2.png');changeCircleColor('#eb7495')"
+                    />
+                </li>
+                <li>
+                    <img
+                        src="../Bánh tráng trộn/images/3.png"
+                        onclick="imgSlider('../Bánh tráng trộn/images/3.png');changeCircleColor('#d752b1')"
+                    />
+                </li>
+            </ul>
+            <ul class="sci">
+                <li>
+                    <a
+                        href="https://www.facebook.com/profile.php?id=100004762546232"
+                        ><img src="../StarBuck/images/facebook.png"
+                    /></a>
+                </li>
+                <li>
+                    <a href="#"
+                        ><img src="../StarBuck/images/instagram.png"
+                    /></a>
+                </li>
+            </ul>
+        </section>
+        <script type="text/javascript">
+            function imgSlider(anything) {
+                document.querySelector(".startbucks").src = anything;
+            }
+            function changeCircleColor(color) {
+                const circle = document.querySelector(".circle");
+                circle.style.background = color;
+            }
+            function toggleMenu() {
+                var menuToggle = document.querySelector(".toggle");
+                var tabmenu = document.querySelector(".tabmenu");
+                menuToggle.classList.toggle("active");
+                tabmenu.classList.toggle("active");
+            }
+        </script>
+    </body>
+</html>
